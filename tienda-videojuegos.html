@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arequipa Games</title>
+    <link rel="stylesheet" href="tienda-estilos.css">
+</head>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video de Fondo</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let audio = document.getElementById("audio2");
+    
+        function iniciarAudio() {
+            audio.play().catch(error => {
+                console.log("El usuario necesita interactuar para activar el audio:", error);
+            });
+            document.removeEventListener("click", iniciarAudio);
+        }    
+        document.addEventListener("click", iniciarAudio);
+    });
+    </script>   
+<body>
+    <audio id="audio2" loop>
+        <source src="AUDIOS/Shop - The Legend of Zelda Ocarina of Time.mp3" type="audio/mp3">
+        Tu navegador no soporta el formato de audio.    
+    </audio>
+    <audio id="audio3">
+        <source src="AUDIOS/agregar carrito.mp3" type="audio/mp3">
+        Tu navegador no soporta el formato de audio.
+    </audio>
+    <audio id="audio4">
+        <source src="AUDIOS/audio comprar.mp3" type="audio/mp3">
+        Tu navegador no soporta el formato de audio.
+            <header>
+        <nav>
+            <div class="logo">
+                <img src="IMAGENES/LOGO AREQUIPA GAMES.png" alt="Arequipa Games">
+            </div>
+            <ul class="nav-links">
+                <li><a href="AREQUIPA GAMES INICIO.html">Inicio</a></li>
+                <li><a href="SOBRE AREQUIPA GAMES.html">Sobre nosotros</a></li>
+                <li><a href="tienda-videojuegos.html">Tienda</a></li>
+                <li><a href="Formulario.Contactanos.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+    </audio>
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="IMAGENES/LOGO AREQUIPA GAMES.png" alt="Arequipa Games">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="AREQUIPA GAMES INICIO.html">Inicio</a></li>
+                    <li><a href="SOBRE AREQUIPA GAMES.html">Sobre nosotros</a></li>
+                    <li><a href="tienda-videojuegos.html">Tienda</a></li>
+                    <li><a href="Formulario.Contactanos.html">Contáctanos</a></li>
+                </ul>
+            </nav>    
+    <div class="container">
+        <h1>Tienda de Videojuegos</h1>
+
+        <!-- Juego 1 -->
+        <div id="Combis" class="game-card" class="producto">
+            <img src="IMAGENES/juego1combis.png" alt="Juego 1" onclick="document.getElementById('audio2').play()">
+            <div class="game-info">
+                <h2>Combi Racing</h2>
+                <p>Corre a más de 100 por hora en este juego de carreras. Juega como piloto de combi, explora las unidades de transporte público en la ciudad de Arequipa y gana carreras. Modifica tu caña y sé el rey de las pistas. ¡Prepárate para la adrenalina y la aventura!</p>
+                <p>Precio: $25</p>
+                <button class="buy-button" onclick="agregarAlCarrito('Liga Cercado Arequipa Sports', 25); document.getElementById('audio3').play()">Combi Racing</button>
+            </div>
+        </div>
+
+        <!-- Juego 2 -->
+        <div id="Assassins" class="game-card" class="producto">
+            <img src="IMAGENES/juego2.assasins.png" alt="Juego 2" onclick="document.getElementById('audio2').play()">
+            <div class="game-info">
+                <h2>Assassins Creed Ciudad Blanca</h2>
+                <p>La historia de un Asesino levantino del siglo XII llamado Altaïr Ibn-La'Ahad durante la Tercera Cruzada, cuya vida es experimentada a través del Animus por su descendiente del siglo XXI, Desmond Miles, ahora se desarrolla por en el siglo XXI en la ciudad de Arequipa. ¡Lucha contra la injusticia social, y la delincuencia!</p>
+                <p>Precio: $50</p>
+                <button class="buy-button" onclick="agregarAlCarrito('Assassins Creed Ciudad Blanca', 50); document.getElementById('audio3').play()">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <!-- Juego 3 -->
+        <div id="Futbol" class="game-card" class="producto" >
+            <img src="IMAGENES/juego3-futbol.png" alt="Juego 3" onclick="document.getElementById('audio2').play()">
+            <div class="game-info">
+                <h2>Liga Cercado Arequipa Sports</h2>
+                <p>Pon en táctica tus habilidades para liderar tu equipo favorito de la liga regional, alcanza la cima en el fútbol y llega a primeras divisiones.</p>
+                <p>Precio: $20</p>
+                <button class="buy-button" onclick="agregarAlCarrito('Liga Cercado Arequipa Sports', 20); document.getElementById('audio3').play()">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <!-- Juego 4 -->
+        <div id="Zelda" class="game-card" class="producto">
+            <img src="IMAGENES/juego4-zelda.jpg" alt="Juego 4" onclick="document.getElementById('audio2').play()">
+            <div class="game-info">
+                <h2>Zelda</h2>
+                <p>Historia A lo largo de sus títulos se describen las heroicas aventuras del guerrero Link, que debe enfrentarse a peligros y resolver acertijos, con los primordiales objetivos de rescatar a la Princesa Zelda, derrotar a Ganondorf y salvar su hogar, el reino de Hyrule.</p>
+                <p>Precio: $60</p>
+                <button class="buy-button" onclick="agregarAlCarrito('The Legend of Zelda', 60); document.getElementById('audio3').play()">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <!-- Juego 5 -->
+        <div id="Minecraft" class="game-card" class="producto">
+            <img src="IMAGENES/juego5-minecrat.jpeg"Juego 3" onclick="document.getElementById('audio2').play()">
+            <div class="game-info">
+                <h2>Minecraft</h2>
+                <p>Minecraft es un videojuego sandbox enfocado en permitirle al jugador explorar y modificar un mundo generado dinámicamente hecho de bloques de un metro cúbico. Es mantenido por Mojang Studios, que forma parte de Xbox Game.</p>
+                <p>Precio: $45</p>
+                <button class="buy-button" onclick="agregarAlCarrito('Minecraft', 45); document.getElementById('audio3').play()">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <!-- Juego 6 -->
+        <div id="COD" class="game-card" class="producto">
+            <img src="IMAGENES/juego6-cod.jpg"Juego 3" onclick="document.getElementById('audio2').play()">
+            <div class="game-info">
+                <h2>Call Of Duty</h2>
+                <p>Call of Duty es una serie de videojuegos de disparos en primera persona, de estilo bélico, desarrollada principal e inicialmente por Infinity Ward, Treyarch, Sledgehammer Games y en menor proporción Raven Software y distribuida por Activision. </p>
+                <p>Precio: $80</p>
+                <button class="buy-button" onclick="agregarAlCarrito('Call Of Duty', 80); document.getElementById('audio3').play()">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <!-- Juego 7 -->
+        <div id="Fifa" class="game-card" class="producto">
+            <img src="IMAGENES/juego7-fifia.jpeg" alt="Juego 3" onclick="document.getElementById('audio2').play()">
+            <div class="game-info">
+                <h2>FIFA 23</h2>
+                <p>FIFA 23, el icónico simulador de fútbol de Electronic Arts (EA), dice adiós dejando huella dentro de la historia de los videojuegos. Y es que con 30 años a sus espaldas, despedirse de esta legendaria franquicia deportiva no es tarea fácil.</p>
+                <p>Precio: $55</p>
+                <button class="buy-button" onclick="agregarAlCarrito('FIFA 23', 55); document.getElementById('audio3').play()">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <!-- Juego 8 -->
+        <div id="Horizon" class="game-card" class="producto">
+            <img src="IMAGENES/juego8-horizon.jpeg" alt="Juego 3" onclick="document.getElementById('audio2').play()">
+            <div class="game-info">
+                <h2>Horizon Forbidden West</h2>
+                <p>Horizon Forbidden West (también Horizon II por el pequeño número en el logo) es un videojuego de rol de acción, aventura y mundo abierto desarrollado por Guerrilla Games y distribuido por Sony Interactive Entertainment.</p>
+                <p>Precio: $69</p>
+                <button class="buy-button" onclick="agregarAlCarrito('Horizon Forbidden West', 69); document.getElementById('audio3').play()">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <!-- Juego 9 -->
+        <div id="Stardew" class="game-card" class="producto">
+            <img src="IMAGENES/juego 9 stardew valley.jpg" alt="Juego 3" onclick="document.getElementById('audio2').play()">
+            <div class="game-info">
+                <h2>Stardew valley</h2>
+                <p>Stardew Valley es un videojuego indie de simulación de granja desarrollado por Eric "ConcernedApe" Barone y publicado por Chucklefish Games (actualmente por ConcernedApe). El juego se lanzó en primer lugar para Windows el 26 de febrero de 2016, y luego para los sistemas operativos OS. </p>
+                <p>Precio: $120</p>
+                <button class="buy-button" onclick="agregarAlCarrito('Stardew valley', 120);document.getElementById('audio3').play()">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div id="carrito">
+            <h3>Carrito de compras</h3>
+            <ul id="lista-carrito">
+
+            </ul>
+            <p>Total: $<span id="total-carrito">0</span></p>
+            <button class="buy-button" onclick="finalizarCompra(); document.getElementById('audio4').play()">Finalizar compra</button>
+        </div>
+        <div id="mensaje-compra" class="mensaje-compra">
+            <i>✔️</i> ¡Compra realizada con éxito!
+        </div>  
+    </div>
+    <footer>
+        <p>&copy; 2025 Arequipa games. Todos los derechos reservados.</p>
+    </footer>
+    <script src="carrito de compra - funcionjs.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos</title>
+    <link rel="stylesheet" href="formulario-estilos.css">
+</head>
+<body>
+    <audio id="audio5" oop>
+        <source src="Audio formulario.mpeg" type="audio/mpeg">
+        Tu navegador no soporta el formato de audio.
+    </audio>
+    <audio id="audio6" oop>
+        <source src="audio enviar contacto.mp3" type="audio/mp3">
+        Tu navegador no soporta el formato de audio.
+    </audio>
+    <header>
+            <nav>
+                <div class="logo">
+                    <img src="IMAGENES/LOGO AREQUIPA GAMES.png" alt="Arequipa Games">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="AREQUIPA GAMES INICIO.html">Inicio</a></li>
+                    <li><a href="SOBRE AREQUIPA GAMES.html">Sobre nosotros</a></li>
+                    <li><a href="tienda-videojuegos.html">Tienda</a></li>
+                    <li><a href="Formulario.Contactanos.html">Contáctanos</a></li>
+                </ul>
+            </nav>    
+    </header>
+    <div class="container">
+        <h2>Formulario de Contacto</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" onclick="document.getElementById('audio6').play()">Enviar</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Arequipa games. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
